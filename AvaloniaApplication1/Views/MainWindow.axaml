@@ -11,6 +11,6 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    
+    <!--<Button Command="{Binding OpenWindowCommand}" Content="Open dialog"></Button>-->
     <ContentControl Content="{Binding ContentSecondView}" />
 </Window>

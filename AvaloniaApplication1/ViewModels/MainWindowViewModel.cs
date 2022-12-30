@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Reactive.Linq;
+using System.Windows.Input;
 using AvaloniaApplication1.Views;
 using ReactiveUI;
 
@@ -17,7 +18,7 @@ namespace AvaloniaApplication1.ViewModels
             get => _contentSecondView;
             private set => this.RaiseAndSetIfChanged(ref _contentSecondView, value);
         }
-        
+
         public static SecondViewModel SecondView { get; set; }
     }
 }

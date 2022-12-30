@@ -9,7 +9,7 @@ public class SecondViewModel : ViewModelBase
     public SecondViewModel()
     {
         ShowDialog = new Interaction<MyWindowViewModel, SecondViewModel?>();
-
+            
         OpenWindowCommand = ReactiveCommand.CreateFromTask(async () =>
         {
             var window = new MyWindowViewModel();
@@ -18,6 +18,7 @@ public class SecondViewModel : ViewModelBase
         });
     }
     
-    public ICommand OpenWindowCommand { get; }
     public Interaction<MyWindowViewModel, SecondViewModel?> ShowDialog { get; }
+        
+    public ICommand OpenWindowCommand { get; }
 }

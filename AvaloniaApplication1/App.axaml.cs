@@ -8,6 +8,8 @@ namespace AvaloniaApplication1
 {
     public partial class App : Application
     {
+        public static MainWindow MainWindow;
+        
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
@@ -21,6 +23,8 @@ namespace AvaloniaApplication1
                 {
                     DataContext = new MainWindowViewModel(),
                 };
+                
+                App.MainWindow = desktop.MainWindow as MainWindow;
             }
 
             base.OnFrameworkInitializationCompleted();

@@ -28,7 +28,7 @@ public partial class SecondView : ReactiveUserControl<SecondViewModel>
         var dialog = new MyWindow();
         dialog.DataContext = interaction.Input;
 
-        var result = await dialog.ShowDialog<SecondViewModel?>(new MainWindow());
+        var result = await dialog.ShowDialog<SecondViewModel?>(this);
                 // Error of this: Argument type 'AvaloniaApplication1.Views.SecondView' is not assignable to parameter type 'Avalonia.Controls.Window'
         interaction.SetOutput(result);
     }
